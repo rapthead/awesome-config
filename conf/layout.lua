@@ -1,4 +1,5 @@
 local awful = require("awful")
+awful.layout    = require("awful.layout")
 -- Widget and layout library
 local wibox = require("wibox")
 
@@ -105,4 +106,7 @@ function luaprompt()
     awful.util.eval, nil,
     awful.util.getdir("cache") .. "/history_eval")
 end
+
+function layoutnext() awful.layout.inc(layouts, 1) end
+function layoutprev() awful.layout.inc(layouts,-1) end
 -- }}}

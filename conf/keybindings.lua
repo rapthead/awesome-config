@@ -189,10 +189,10 @@ tasklistbuttons = awful.util.table.join(
                                           end))
 
 layoutboxbuttons = awful.util.table.join(
-                           awful.button({ }, 1, function () awful.layout.inc(layouts, 1) end),
-                           awful.button({ }, 3, function () awful.layout.inc(layouts, -1) end),
-                           awful.button({ }, 4, function () awful.layout.inc(layouts, 1) end),
-                           awful.button({ }, 5, function () awful.layout.inc(layouts, -1) end))
+                           awful.button({ }, 1, function() layoutnext() end),
+                           awful.button({ }, 3, function() layoutprev() end),
+                           awful.button({ }, 4, function() layoutnext() end),
+                           awful.button({ }, 5, function() layoutprev() end))
 -- {{{ Mouse bindings
 root.buttons(awful.util.table.join(
     awful.button({ }, 3, function () mymainmenu:toggle() end),
